@@ -241,11 +241,12 @@
          </section>
       </div>
    </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+      <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
       <script src="https://res.cloudinary.com/desyuhf6j/raw/upload/v1670942904/Vivacity%20Styles%20and%20JS/index_boeim5.js" crossorigin="anonymous"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script type="text/javascript" src="https://res.cloudinary.com/desyuhf6j/raw/upload/v1670942904/Vivacity%20Styles%20and%20JS/jquery.hislide_x371fk.js" crossorigin="anonymous"></script>
+      <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script async type="text/javascript" src="https://res.cloudinary.com/desyuhf6j/raw/upload/v1670942904/Vivacity%20Styles%20and%20JS/jquery.hislide_x371fk.js" crossorigin="anonymous"></script>
       <script src="https://res.cloudinary.com/desyuhf6j/raw/upload/v1670942904/Vivacity%20Styles%20and%20JS/transition_cn5zit.js" crossorigin="anonymous"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8Q73C8WSP"></script>
       <script>
          $(".slide").hiSlide();
 
@@ -263,6 +264,12 @@
               img.classList.remove('lazy');
             });
          }, 500);
+
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+
+         gtag('config', 'G-Z8Q73C8WSP');
 
       </script>
 </body>

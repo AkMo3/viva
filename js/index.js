@@ -35,10 +35,6 @@ function changePlanet() {
   planet.src = "assets/img/moon.png";
 }
 
-window.addEventListener("scroll", (event) => {
-  myScrollFunction();
-});
-
 // function myScrollFunction() {
 //     console.log("Scroll is working");
 //     var card = gsap.timeline();
@@ -74,15 +70,10 @@ function darkMode() {
   contactCard.to(".contact-card", {
     visibility: "visible",
   });
-  var gold = gsap.timeline();
-  gold.to(".gold", {
-    visibility: "visible",
-  });
   var showNav = gsap.timeline();
   showNav.to("nav", {
     delay: 1.5,
     duration: 0.5,
-    outerHeight: 1,
     visibility: "visible",
   });
   var showSlider = gsap.timeline();

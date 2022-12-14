@@ -1060,7 +1060,6 @@ section {
   .main .card,.middle {
     width: 88%;
     height: 20vh;
-    background: url('https://res.cloudinary.com/desyuhf6j/image/upload/v1671035811/Vivacity/ComingSoon_Card_Background-1_z4b3kb.webp');
   }
   .middle{
     position: fixed;
@@ -1078,6 +1077,10 @@ section {
 
   .main #viva-main {
     font-size: 5vh;
+  }
+
+  .main .card {
+    background: url('https://res.cloudinary.com/desyuhf6j/image/upload/v1671035811/Vivacity/ComingSoon_Card_Background-1_z4b3kb.webp');
   }
 }
 

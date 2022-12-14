@@ -9,15 +9,26 @@
         };
         
         $.extend(true, setting, options);
+
+        class stateRep {
+            constructor(zin, width, height, top, left, $opacity) {
+                this.zin = zin;   
+                this.width = width;   
+                this.height = height;   
+                this.top = top;   
+                this.left = left;   
+                this.$opacity = $opacity;   
+            }
+        }
         
         var states = [
-            { $zIndex: 1, width: 120+200, height: 150+30, top: 69, left: 134+130, $opacity: 0.2 },
-            { $zIndex: 2, width: 130+200, height: 170+30, top: 59, left: 0+130, $opacity: 0.4 },
-            { $zIndex: 3, width: 170+200, height: 218+30, top: 35, left: 110+130, $opacity: 0.7 },
-            { $zIndex: 4, width: 224+200, height: 288+30, top: 0, left: 263+130, $opacity: 1 },
-            { $zIndex: 3, width: 170+200, height: 218+30, top: 35, left: 470+130, $opacity: 0.7 },
-            { $zIndex: 2, width: 130+200, height: 170+30, top: 59, left: 620+130, $opacity: 0.4 },
-            { $zIndex: 1, width: 120+200, height: 150+30, top: 69, left: 500+130, $opacity: 0.2 }
+            new stateRep(1, 120 + 200, 150 + 30, 69, 134 + 130, 0.2),
+            new stateRep(2, 130 + 200, 170 + 30, 59, 0 + 130, 0.4),
+            new stateRep(3, 170 + 200, 218 + 30, 35, 110 + 130, 0.7),
+            new stateRep(4, 224 + 200, 288 + 30, 0, 263 + 130, 1),
+            new stateRep(3, 170 + 200, 218 + 30, 35, 470 + 130, 0.7),
+            new stateRep(2, 130 + 200, 170 + 30, 59, 620 + 130, 0.4),
+            new stateRep(1, 120 + 200, 150 + 30, 69, 500 + 130, 0.2)
         ];
 
         var $lis = $ele.find('li');
@@ -44,8 +55,8 @@
         
         function move() {
             $lis.each(function(index, element) {
-                var state = states[index];
-                $(element).css('zIndex', state.$zIndex).finish().animate(state, setting.speed).find('img').css('opacity', state.$opacity);
+                var stateR = states[index];
+                if (stateR !== undefined) $(element).css('z-index', stateR.zin).finish().animate(stateR, setting.speed).find('img').css('opacity', stateR.$opacity);
             });
         }
 

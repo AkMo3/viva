@@ -5,7 +5,7 @@
    <!-- <meta charset="UTF-8">
          <meta http-equiv="X-UA-Compatible" content="IE=edge">
          <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-   <link rel="stylesheet" href="https://res.cloudinary.com/desyuhf6j/raw/upload/v1670942805/Vivacity%20Styles%20and%20JS/style_fwbwr0.css" />
+   <link rel="stylesheet" href="css/style.css" />
    <link rel="preconnect" href="https://fonts.googleapis.com" />
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
    <!-- <link href="https://fonts.cdnfonts.com/css/japanese-2023" rel="stylesheet" crossorigin="anonymous"/>
@@ -66,13 +66,22 @@
    </nav>
    <div id="start" class="start">
       <div id="loader">
-         <img src="https://res.cloudinary.com/desyuhf6j/image/upload/v1670778216/Vivacity/loader_skcbiw.gif" loading="eager" />
+         <picture>
+            <source media="(min-width:650px)" srcset="https://res.cloudinary.com/desyuhf6j/image/upload/q_40/v1670778216/Vivacity/loader_skcbiw.gif">
+            <img src="https://res.cloudinary.com/desyuhf6j/image/upload/v1670778216/Vivacity/loader_skcbiw.gif" alt="" loading="eager">
+          </picture>
       </div>
       <div class="logo">
-         <img src="https://res.cloudinary.com/desyuhf6j/image/upload/v1670064436/Vivacity/viva_logo_f0idvt.png" alt="" id="viva-logo" loading="eager" />
+         <picture >
+            <source media="(min-width:650px)" srcset="https://res.cloudinary.com/desyuhf6j/image/upload/q_40/v1670064436/Vivacity/viva_logo_f0idvt.png">
+            <img id="viva-logo" src="https://res.cloudinary.com/desyuhf6j/image/upload/v1670064436/Vivacity/viva_logo_f0idvt.png" alt="" loading="eager">
+          </picture> 
       </div>
       <div class="trippypl">
-         <img id="trippy" src="https://res.cloudinary.com/desyuhf6j/image/upload/v1670064435/Vivacity/trippy_planet_pphagj.png" loading="eager" />
+         <picture >
+            <source media="(min-width:650px)" srcset="https://res.cloudinary.com/desyuhf6j/image/upload/q_40/v1670064435/Vivacity/trippy_planet_pphagj.png">
+            <img id="trippy" src="https://res.cloudinary.com/desyuhf6j/image/upload/v1670064435/Vivacity/trippy_planet_pphagj.png" alt="" loading="eager">
+          </picture> 
       </div>
       <div class="light">
          <p class="mainbg">
@@ -82,10 +91,16 @@
              </picture> 
          </p>
          <div class="landscape">
-            <img src="https://res.cloudinary.com/desyuhf6j/image/upload/v1670064429/Vivacity/landscape-transformed_vbpucz.png" alt="" loading="eager"/>
+            <picture>
+               <source media="(min-width:650px)" srcset="https://res.cloudinary.com/desyuhf6j/image/upload/q_40/v1670064429/Vivacity/landscape-transformed_vbpucz.png">
+               <img src="https://res.cloudinary.com/desyuhf6j/image/upload/v1670064429/Vivacity/landscape-transformed_vbpucz.png" alt="" loading="eager">
+             </picture>
          </div>
          <div class="face">
-            <img src="https://res.cloudinary.com/desyuhf6j/image/upload/v1670064426/Vivacity/character_eyes_msgoyz.png" alt="" loading="eager" />
+            <picture>
+               <source media="(min-width:650px)" srcset="https://res.cloudinary.com/desyuhf6j/image/upload/q_40/v1670064426/Vivacity/character_eyes_msgoyz.png">
+               <img src="https://res.cloudinary.com/desyuhf6j/image/upload/v1670064426/Vivacity/character_eyes_msgoyz.png" alt="" loading="eager">
+             </picture>
          </div>
          <div id="test" onclick="darkMode()" class="middle pointer">
             <div class="viva_front_text">Vivacity</div>
@@ -102,9 +117,11 @@
          </div>
          <div class="darkbg2">
             <div class="bgs">
-               <img id="bg-1"
-                  src="https://res.cloudinary.com/desyuhf6j/image/upload/v1670778464/Vivacity/bg_background_final_bedkog.png" alt="" loading="lazy"/>
-
+               <picture>
+                  <source media="(min-width:650px)" srcset="https://res.cloudinary.com/desyuhf6j/image/upload/q_40/v1670778464/Vivacity/bg_background_final_bedkog.png">
+                  <img id="bg-1" src="https://res.cloudinary.com/desyuhf6j/image/upload/v1670778464/Vivacity/bg_background_final_bedkog.png" alt="" loading="lazy">
+                </picture>
+               <img  alt="" loading="lazy"/>
             </div>
          </div>
          <div class="ninja">
@@ -242,10 +259,10 @@
       </div>
    </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-      <script src="https://res.cloudinary.com/desyuhf6j/raw/upload/v1670942904/Vivacity%20Styles%20and%20JS/index_boeim5.js" crossorigin="anonymous"></script>
+      <script src="js/index.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script type="text/javascript" src="https://res.cloudinary.com/desyuhf6j/raw/upload/v1670942904/Vivacity%20Styles%20and%20JS/jquery.hislide_x371fk.js" crossorigin="anonymous"></script>
-      <script src="https://res.cloudinary.com/desyuhf6j/raw/upload/v1670942904/Vivacity%20Styles%20and%20JS/transition_cn5zit.js" crossorigin="anonymous"></script>
+      <script src="js/transition.js" crossorigin="anonymous"></script>
       <script>
          $(".slide").hiSlide();
 
@@ -260,9 +277,14 @@
          setTimeout(() => {
             lazyloadImages.forEach(function(img) {
               img.src = img.dataset.src;
-              img.classList.remove('lazy');
+              img.classList.remove('lazyload');
             });
          }, 500);
+
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-Z8Q73C8WSP');
 
       </script>
 </body>

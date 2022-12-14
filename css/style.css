@@ -1070,6 +1070,38 @@ section {
   }
 }
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 900px) {
+  .secondary_text_first_page {
+    color: rgb(229, 139, 229);
+    font-size: 1.42vw;
+    font-weight: bold;
+    margin: auto;
+    font-family: "Montserrat";
+    padding-top: 20px;
+    padding-right: 25px;
+    margin-bottom: 0vw;
+    padding-bottom: 0vw;
+    margin-top: -2.5vh;
+    z-index: 2;
+  }
+}
+
+@media only screen and (min-device-width: 900px) and (max-device-width: 1000px) {
+  .secondary_text_first_page {
+    color: rgb(229, 139, 229);
+    font-size: 1.42vw;
+    font-weight: bold;
+    margin: auto;
+    font-family: "Montserrat";
+    padding-top: 20px;
+    padding-right: 25px;
+    margin-bottom: 0vw;
+    padding-bottom: 0vw;
+    margin-top: -3.5vh;
+    z-index: 2;
+  }
+}
+
 /* for ninja,navbar and viva-logo at 768 */
 @media only screen and (min-device-width: 0px) and (max-device-width: 768px) {
   .ninja img,.face {

@@ -149,6 +149,20 @@ section {
   height: 35vh;
 }
 
+
+.darkbg2 .trippypl {
+  position: fixed;
+  right: 40vh;
+  top: -0.5vh;
+  height: 0.05vh;
+  width: 0.05vh;
+  z-index: 1;
+}
+
+.darkbg2 .trippypl img{
+  height: 40vh;
+} 
+
 #sponsers {
   /* border: 2px solid red; */
   width: 100%;
@@ -191,7 +205,7 @@ section {
 .start .face img {
   height: 40vh;
   /* transform: scale(1.0); */
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .middle {
